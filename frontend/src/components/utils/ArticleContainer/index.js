@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import Radium from 'radium';
+import Radium from 'radium'
 
-import { titleCase, elipsesText } from '../functions';
+import { titleCase, elipsesText } from '../functions'
 
 const ArticleContainer = ({ category, title, imageLOC, description, link }) => {
-  let updatedTitle = titleCase(title);
+  let updatedTitle = titleCase(title)
 
   let rStyle = {
     container: {
@@ -20,8 +20,7 @@ const ArticleContainer = ({ category, title, imageLOC, description, link }) => {
       margin: '0 0 10px 0',
     },
     description: {
-      wordWrap: 'break-word',
-      width: '100%',
+      width: '95%',
       padding: 0,
       margin: 0,
       maxHeight: '60px',
@@ -35,20 +34,20 @@ const ArticleContainer = ({ category, title, imageLOC, description, link }) => {
       position: 'absolute',
       margin: '-20px 0 0 50px',
     },
-  };
+  }
 
   return (
     <div style={rStyle.container}>
       <img style={rStyle.image} src={imageLOC} alt={updatedTitle} />
       <h2 style={rStyle.title}>{updatedTitle}</h2>
-      <p style={rStyle.description}>{elipsesText(description, 100)}</p>
+      <p style={rStyle.description}>{elipsesText(description, 80)}</p>
       <div style={rStyle.linkContainer}>
         <Link style={rStyle.link} to={link}>
           Read More
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Radium(ArticleContainer);
+export default Radium(ArticleContainer)

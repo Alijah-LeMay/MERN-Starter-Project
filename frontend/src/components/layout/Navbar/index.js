@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Assets
 import classes from './Navbar.module.css';
@@ -7,6 +8,8 @@ import classes from './Navbar.module.css';
 import HamburgerMenu from './HamburgerMenu';
 import NavigationItems from './NavigationItems';
 import CenterContainer from '../../utils/CenterContainer';
+import OutlinedNavBtn from './OutlinedNavBtn';
+import Logo from '../../Logo';
 
 const Navbar = () => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
@@ -18,14 +21,18 @@ const Navbar = () => {
     setShowSideDrawer(false);
   };
 
-  console.log(showSideDrawer);
   return (
     <CenterContainer>
       <nav className={classes.nav}>
-        <div className={classes.headerLogo}></div>
+        <div className={classes.headerLogo}>
+          <Link to='/'>
+            <Logo />
+          </Link>
+        </div>
 
         <ul className={classes.desktop_container}>
           <NavigationItems />
+          <OutlinedNavBtn to='/quote' content='Hire Us' />
         </ul>
         <HamburgerMenu
           showBack={showSideDrawer}

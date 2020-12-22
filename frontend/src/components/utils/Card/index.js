@@ -9,7 +9,6 @@ const Card = ({
   children,
   align,
   radius,
-  bgColor,
 }) => {
   let alignment = 'center';
   if (align === 'left') {
@@ -24,7 +23,7 @@ const Card = ({
     textAlign: alignment,
     flexDirection: 'column',
     alignItems: alignment,
-    backgroundColor: bgColor ? bgColor : 'white',
+    backgroundColor: 'white',
     justifyContent: 'space-around',
     boxShadow: '0 4px 8px 0 rgba(0,0,0, 0.2)',
     padding: padding ? padding : '30px 16px',
@@ -42,7 +41,7 @@ const Card = ({
       display: 'flex',
       flexDirection: 'column',
       alignItems: alignment,
-      backgroundColor: bgColor ? bgColor : 'white',
+      backgroundColor: 'white',
       justifyContent: 'space-around',
       border: '1px solid #333',
       padding: padding ? padding : '30px 16px',

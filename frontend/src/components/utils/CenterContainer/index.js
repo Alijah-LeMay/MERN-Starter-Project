@@ -12,7 +12,6 @@ const CenterContainer = ({
   Horizontal,
   justify,
   width,
-  alignText,
 }) => {
   let direction = 'column';
   if (Horizontal) {
@@ -27,10 +26,10 @@ const CenterContainer = ({
       display: 'flex',
       flexDirection: direction,
       justifyContent: justify && justify,
-      textAlign: alignText ? alignText : 'center',
+      textAlign: 'center',
       padding: 0,
       maxWidth: '100%',
-      width: width ? width : '1370px',
+      width: width ? width : '1200px',
       margin: 'auto',
     },
   };
@@ -53,11 +52,11 @@ const CenterContainer = ({
         display: 'flex',
         flexDirection: direction,
         justifyContent: justify && justify,
-        textAlign: alignText ? alignText : 'center',
+        textAlign: 'center',
         position: 'relative',
         padding: bgPadding && bgPadding,
         maxWidth: '100%',
-        width: width ? width : '1370px',
+        width: width ? width : '1200px',
         margin: 'auto',
         zIndex: '10',
       },
