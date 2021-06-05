@@ -58,7 +58,7 @@ const LoginScreen = ({ history }) => {
   }
 
   return (
-    <Fragment>
+    <>
       <ImageBanner
         imageLOC={landing_bck}
         bgOpacity
@@ -80,7 +80,7 @@ const LoginScreen = ({ history }) => {
           <MyButton content='Submit' variant='submit' />
         </form>
       </CenterContainer>
-    </Fragment>
+    </>
   )
 }
 

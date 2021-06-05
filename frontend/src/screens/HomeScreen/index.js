@@ -8,7 +8,7 @@ import CenterContainer from '../../components/CenterContainer'
 
 const HomeScreen = () => {
   return (
-    <div className={classes.homeScreen_Container}>
+    <div className={classes.screen_container}>
       <CenterContainer bgColor='#f2f2f2' bgPadding='25px 0'></CenterContainer>
     </div>
   )
