@@ -1,4 +1,5 @@
 .nav {
+  height: 85px;
   left: 50%;
   position: absolute;
   left: 0;
@@ -37,6 +38,7 @@
 .regular_nav_li a {
   color: white;
 }
+
 .outlined_nav_li {
   background-color: white;
   border-radius: 40px;
@@ -86,7 +88,7 @@
   border-bottom: 1px solid #fff;
 }
 .drawerlist_container li a {
-  padding: 15px 0;
+  padding: 15px 5px;
   color: #fff;
 }
 .spacing_container {

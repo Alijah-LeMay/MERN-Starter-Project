@@ -1,15 +1,17 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import classes from './Navbar.module.css';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import classes from './Navbar.module.css'
 
-const NavigationItems = ({ clicked }) => {
-  let currentlyActiveStyle = { color: '#4bb781' };
+const NavigationItems = (props) => {
+  const { clicked } = props
+  let currentlyActiveStyle = { color: '#4bb781' }
 
   let navItems = [
     { to: '/', name: 'Home' },
     { to: '/ourwork', name: 'Our Work' },
     { to: '/services', name: 'Services' },
-  ];
+    { to: '/blog', name: 'Blog' },
+  ]
 
   return (
     <>
@@ -27,7 +29,7 @@ const NavigationItems = ({ clicked }) => {
         </li>
       ))}
     </>
-  );
-};
+  )
+}
 
-export default NavigationItems;
+export default NavigationItems

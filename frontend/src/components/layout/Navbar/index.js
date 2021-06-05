@@ -1,29 +1,30 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 // Assets
-import classes from './Navbar.module.css';
+import classes from './Navbar.module.css'
 
 // My Components
-import HamburgerMenu from './HamburgerMenu';
-import NavigationItems from './NavigationItems';
-import CenterContainer from '../../utils/CenterContainer';
-import OutlinedNavBtn from './OutlinedNavBtn';
-import Logo from '../../Logo';
+import HamburgerMenu from './HamburgerMenu'
+import NavigationItems from './NavigationItems'
+import CenterContainer from '../../CenterContainer'
+import OutlinedNavBtn from './OutlinedNavBtn'
+import Logo from '../../Logo'
 
-const Navbar = () => {
-  const [showSideDrawer, setShowSideDrawer] = useState(false);
+const Navbar = (props) => {
+  const [showSideDrawer, setShowSideDrawer] = useState(false)
+  const { bgColor } = props
 
   const drawerToggleHandler = () => {
-    setShowSideDrawer(!showSideDrawer);
-  };
+    setShowSideDrawer(!showSideDrawer)
+  }
   const drawerCloseHandler = () => {
-    setShowSideDrawer(false);
-  };
+    setShowSideDrawer(false)
+  }
 
   return (
     <CenterContainer>
-      <nav className={classes.nav}>
+      <nav className={classes.nav} style={{ backgroundColor: bgColor }}>
         <div className={classes.headerLogo}>
           <Link to='/'>
             <Logo />
@@ -41,7 +42,7 @@ const Navbar = () => {
         />
       </nav>
     </CenterContainer>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

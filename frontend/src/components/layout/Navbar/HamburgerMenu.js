@@ -4,7 +4,7 @@ import React from 'react'
 import classes from './Navbar.module.css'
 
 // My Components
-import Backdrop from '../../utils/Backdrop'
+import Backdrop from '../../Backdrop'
 import NavigationItems from './NavigationItems'
 import Logo from '../../Logo'
 import OutlinedNavBtn from './OutlinedNavBtn'
